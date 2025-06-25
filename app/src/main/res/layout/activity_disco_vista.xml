@@ -115,7 +115,7 @@
         android:id="@+id/btnCarrito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/pink_light_pastel"
+        android:backgroundTint="@color/dark_brown"
         android:padding="16dp"
         android:text="@string/tv_aniadirAlCarrito"
         android:textSize="16sp"
