@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Disquera_Vinilos</string>
+    <string name="str_tv_fotoDelAlbum">Foto del álbum</string>
+    <string name="tv_tituloDelAlbum">Título del del Album</string>
+    <string name="tv_nombreDeArtista">Nombre de Artista</string>
+    <string name="tv_precio">Precio:</string>
+    <string name="hint_rock">Rock</string>
+    <string name="tv_genero">Género:</string>
+    <string name="hint_warner">Warner</string>
+    <string name="tv_discografica">Discográfica:</string>
+    <string name="hint_anio">2006</string>
+    <string name="tv_anio">Año:</string>
+    <string name="hint_precio">€33</string>
+    <string name="tv_aniadirAlCarrito">Añadir al Carrito</string>
 
     <!-- Login Screen -->
     <string name="login_title">Iniciar Sesión</string>
