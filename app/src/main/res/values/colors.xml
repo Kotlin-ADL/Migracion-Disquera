@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores principales del proyecto -->
+    <color name="primary_light">#B89E9E</color>      <!-- B89E9E -->
+    <color name="white">#FFFFFF</color>              <!-- FFFFFF -->
+    <color name="primary_medium">#E5E8EB</color>     <!-- E5E8EB -->
+    <color name="dark_gray">#171212</color>          <!-- 171212 -->
+    <color name="medium_gray">#261C1C</color>        <!-- 261C1C -->
+    <color name="dark_brown">#382929</color>         <!-- 382929 -->
+    <color name="accent_brown">#543D3D</color>       <!-- 543D3D -->
+
+    <!-- Colores adicionales útiles -->
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_dark">#80000000</color>
+    <color name="semi_transparent_light">#80FFFFFF</color>
+
+    <!-- Colores de texto -->
+    <color name="text_primary">#171212</color>
+    <color name="text_secondary">#261C1C</color>
+    <color name="text_hint">#B89E9E</color>
+    <color name="text_white">#FFFFFF</color>
+
+
 </resources>
+
