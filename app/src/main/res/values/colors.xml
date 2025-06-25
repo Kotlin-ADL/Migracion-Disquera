@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="pink_light_pastel">#B89E9E</color>
+    <color name="grey_light_blueish">#E5E8EB</color>
+    <color name="dark_brown_black">#171212</color>
+    <color name="dark_reddish_brown_deep">#261C1C</color>
+    <color name="dark_reddish_brown_medium">#382929</color>
+    <color name="dark_reddish_brown_light">#543D3D</color>
+    <color name="red_vibrant_accent">#E82933</color>
 </resources>
