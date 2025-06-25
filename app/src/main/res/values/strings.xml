@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Disquera_Vinilos</string>
+
+    <!-- Vista Individual de Disco -->
     <string name="str_tv_fotoDelAlbum">Foto del álbum</string>
     <string name="tv_tituloDelAlbum">Título del del Album</string>
     <string name="tv_nombreDeArtista">Nombre de Artista</string>
