@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivAlbumCover"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/str_tv_fotoDelAlbum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/albumPlaceholder" />
+
+    <TextView
+        android:id="@+id/tvAlbumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tv_tituloDelAlbum"
+        android:padding="16dp"
+        android:paddingBottom="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbumCover"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAlbumArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tv_nombreDeArtista"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/tvAlbumTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumTitle" />
+
+    <TextView
+        android:id="@+id/tvAnio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/tv_anio"
+        app:layout_constraintStart_toStartOf="@+id/ivAlbumCover"
+        app:layout_constraintTop_toBottomOf="@+id/ivAlbumCover" />
+
+    <TextView
+        android:id="@+id/tvAnioData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_anio"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tvAnio"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnio" />
+
+    <TextView
+        android:id="@+id/tvDiscografica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/tv_discografica"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAnio"
+        app:layout_constraintStart_toEndOf="@+id/tvAnio" />
+
+    <TextView
+        android:id="@+id/tvDiscograficaData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_warner"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAnioData"
+        app:layout_constraintStart_toStartOf="@+id/tvDiscografica" />
+
+    <TextView
+        android:id="@+id/tvGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/tv_genero"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDiscografica"
+        app:layout_constraintStart_toEndOf="@+id/tvDiscografica" />
+
+    <TextView
+        android:id="@+id/tvGeneroData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_rock"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDiscograficaData"
+        app:layout_constraintStart_toStartOf="@+id/tvGenero" />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/tv_precio"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGenero"
+        app:layout_constraintStart_toEndOf="@+id/tvGenero" />
+
+    <TextView
+        android:id="@+id/tvPrecioData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_precio"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGeneroData"
+        app:layout_constraintStart_toStartOf="@+id/tvPrecio" />
+
+    <Button
+        android:id="@+id/btnCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink_light_pastel"
+        android:padding="16dp"
+        android:text="@string/tv_aniadirAlCarrito"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvGeneroData"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecioData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
