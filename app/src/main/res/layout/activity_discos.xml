@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ScrollView
+    android:id="@+id/sVBase"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
     android:background="@color/dark_gray">
 
 
@@ -96,44 +103,29 @@
         android:background="#261C1C"
         />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDiscos"
+        app:layout_constraintTop_toBottomOf="@id/vSeparator"
+        app:layout_constraintBottom_toTopOf="@id/espacio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/espacio"
+        android:layout_width="match_parent"
+
+        android:layout_height="900dp"
         android:orientation="vertical"
-        android:padding="8dp">
-
-        <ImageView
-            android:id="@+id/imgDisco"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/album_placeholder" />
-
-        <TextView
-            android:id="@+id/txtNombreDisco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre del Disco"
-            android:textAlignment="center"
-            android:textColor="#000"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerPortadas"
-            app:layout_constraintTop_toBottomOf="@id/vSeparator"
-            app:layout_constraintBottom_toTopOf="@+id/lLAllBotButtons"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:clipToPadding="false" />
-
-    </LinearLayout>
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerDiscos"
+        tools:layout_editor_absoluteX="-38dp" />
 
 
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
     <LinearLayout
         android:id="@+id/lLAllBotButtons"
@@ -141,9 +133,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/medium_gray"
         >
 
@@ -152,7 +145,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/medium_gray"
-            android:text="Home"
+            android:text="Inicio"
+            android:drawableTop="@drawable/ic_home"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
             android:layout_marginStart="3dp"
@@ -164,19 +158,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/medium_gray"
-            android:text="Search"
+            android:text="buscar"
+            android:drawableTop="@drawable/ic_search_24"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
             android:layout_marginStart="3dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             />
 
         <Button
             android:id="@+id/btnCart"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@@color/medium_gray"
-            android:text="Cart"
+            android:backgroundTint="@color/medium_gray"
+            android:text="Carrito"
+            android:drawableTop="@drawable/baseline_shopping_cart_24"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
             android:layout_marginStart="3dp"
@@ -188,16 +184,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/medium_gray"
-            android:text="Profile"
+            android:text="Perfil"
+            android:drawableTop="@drawable/ic_person"
             android:padding="0dp"
             android:layout_marginStart="3dp"
             android:layout_weight="1"
             />
     </LinearLayout>
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
