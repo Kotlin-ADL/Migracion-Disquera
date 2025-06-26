@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_gray">
+
+
+    <TextView
+        android:id="@+id/tVTitleDiscs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Discos"
+        android:textSize="22sp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/lLAllButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tVTitleDiscs"
+
+        >
+
+    <Button
+        android:id="@+id/btnFeatured"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#171212"
+        android:text="Featured"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btnNewArrivals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#171212"
+        android:text="Recien Llegados"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_weight="2"
+        />
+        <Button
+            android:id="@+id/btnOffers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#171212"
+            android:text="Offers"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+        />
+
+        <Button
+            android:id="@+id/btnGenres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#171212"
+            android:text="Genres"
+            android:padding="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vSeparator"
+        app:layout_constraintTop_toBottomOf="@+id/lLAllButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#261C1C"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imgDisco"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/album_placeholder" />
+
+        <TextView
+            android:id="@+id/txtNombreDisco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Disco"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPortadas"
+            app:layout_constraintTop_toBottomOf="@id/vSeparator"
+            app:layout_constraintBottom_toTopOf="@+id/lLAllBotButtons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lLAllBotButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/medium_gray"
+        >
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/medium_gray"
+            android:text="Home"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/medium_gray"
+            android:text="Search"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="2"
+            />
+
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@@color/medium_gray"
+            android:text="Cart"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/medium_gray"
+            android:text="Profile"
+            android:padding="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
