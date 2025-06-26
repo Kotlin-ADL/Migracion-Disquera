@@ -14,7 +14,7 @@
         android:contentDescription="@string/str_tv_fotoDelAlbum"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/albumPlaceholder" />
+        tools:src="@drawable/albumplaceholder" />
 
     <TextView
         android:id="@+id/tvAlbumTitle"
