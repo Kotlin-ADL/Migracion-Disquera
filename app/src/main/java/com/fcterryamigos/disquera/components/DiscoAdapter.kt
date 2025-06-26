@@ -8,18 +8,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
 import com.fcterryamigos.disquera.R
+import com.fcterryamigos.disquera.model.Disco
 
-data class Disco(
-    @DrawableRes val imageCover: Int,
-    val titulo: String,
-    val artista: String,
-    val precio: Double,
-    val genero: String
-)
-
+/**
+ * Adapter personalizado para el RecyclerView de los discos.
+ * @param discos Lista de objetos "Disco" que se mostraran en el RecyclerView.*/
 class DiscoAdapter(private val discos: List<Disco>) :
     RecyclerView.Adapter<DiscoAdapter.DiscoViewHolder>() {
 
@@ -67,6 +62,6 @@ class DiscoAdapter(private val discos: List<Disco>) :
         }
     }
 
-    //Devuelve el numero total de elementos en la lista
+    //Devuelve el número total de elementos en la lista
     override fun getItemCount() = discos.size
 }

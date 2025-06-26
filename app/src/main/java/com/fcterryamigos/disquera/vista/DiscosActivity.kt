@@ -15,9 +15,10 @@ import androidx.core.view.isGone
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fcterryamigos.disquera.R
-import com.fcterryamigos.disquera.components.Disco
 import com.fcterryamigos.disquera.components.DiscoAdapter
+import com.fcterryamigos.disquera.model.Disco
 
+/**Esta activity incluye una barra de busqueda, filtros y muestra una lista de discos con sus detalles.*/
 class DiscosActivity : AppCompatActivity() {
 
     //variables constantes
@@ -33,14 +34,14 @@ class DiscosActivity : AppCompatActivity() {
     private lateinit var spinnerArtistas: Spinner
     private lateinit var spinnerPrecio: Spinner
 
-    //Datos
+    //variable para datos ficticios.
     private lateinit var datosDeDiscos: List<Disco>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_discos)
 
-        //carga datos
+        //carga datos ficticios
         datosDeDiscos = cargarDatosDeDiscos()
 
         //inicio de componentes
@@ -51,6 +52,10 @@ class DiscosActivity : AppCompatActivity() {
         initRecyclerView()
 
     }
+
+    /*
+    * ************************ Funciones de inicialización de componentes ************
+     */
 
     private fun initSearchBar() {
         searchBar = findViewById(R.id.searchView_activity_discos)
@@ -89,6 +94,7 @@ class DiscosActivity : AppCompatActivity() {
 
     private fun initBtnFiltroArtista() {
         spinnerArtistas = findViewById(R.id.spinner_artistas_activity_discos)
+        //transforma la lista en nueva lista de solo artistas, sin repetir.
         val nombreDeArtistas = cargarDatosDeDiscos().map { it.artista }.distinct()
 
         spinnerArtistas.adapter = ArrayAdapter(
@@ -146,6 +152,11 @@ class DiscosActivity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
     }
 
+    /*
+        ---------------------- FIN Funciones de inicialización de componentes --------------------------------------
+     */
+
+    /**Datos ficticios para recargar la lista de discos*/
     private fun cargarDatosDeDiscos(): List<Disco> {
         val placeholderImage = R.drawable.placeholder
         return listOf(
@@ -170,6 +181,7 @@ class DiscosActivity : AppCompatActivity() {
         )
     }
 
+    /**Fcn para mostrar un mensaje en pantalla. Es para pruebas*/
     private fun mesage(mesage: String) {
         Toast.makeText(this, mesage, Toast.LENGTH_SHORT).show()
     }
