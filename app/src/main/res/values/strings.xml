@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">Disquera_Vinilos</string>
+
+    <!-- Vista Individual de Disco -->
+    <string name="str_tv_fotoDelAlbum">Foto del álbum</string>
+    <string name="tv_tituloDelAlbum">Título del del Album</string>
+    <string name="tv_nombreDeArtista">Nombre de Artista</string>
+    <string name="tv_precio">Precio:</string>
+    <string name="hint_rock">Rock</string>
+    <string name="tv_genero">Género:</string>
+    <string name="hint_warner">Warner</string>
+    <string name="tv_discografica">Discográfica:</string>
+    <string name="hint_anio">2006</string>
+    <string name="tv_anio">Año:</string>
+    <string name="hint_precio">€33</string>
+    <string name="tv_aniadirAlCarrito">Añadir al Carrito</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="no_account">¿No tienes cuenta?</string>
+    <string name="register_link">Regístrate</string>
+
+    <!-- Validation Messages -->
+    <string name="error_email_required">El email es requerido</string>
+    <string name="error_email_invalid">Formato de email inválido</string>
+    <string name="error_password_required">La contraseña es requerida</string>
+    <string name="error_password_length">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_login_failed">Credenciales incorrectas</string>
+
+    <!-- Success Messages -->
+    <string name="login_success">Login exitoso</string>
+    <string name="welcome_message">¡Bienvenido!</string>
+
+    <!-- Loading States -->
+    <string name="logging_in">Iniciando sesión...</string>
+
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="retry">Reintentar</string>
+
 </resources>
