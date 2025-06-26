@@ -10,6 +10,9 @@
         android:id="@+id/searchView_activity_discos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
         android:queryHint="Buscar discos..."
         app:iconifiedByDefault="false" />
 
@@ -21,51 +24,61 @@
         android:text="Filtros de busqueda" />
 
 
+    <!--Spinners-->
     <LinearLayout
         android:id="@+id/layout_filtros_activity_discos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:visibility="visible">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/dropdown_menuArtista_activity_discos"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="290dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
+            android:orientation="vertical">
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteText_seleccionArtista_discos_activity"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Seleccione un artista"
-                android:inputType="none" />
+                android:layout_gravity="center"
+                android:text="Artistas" />
 
+            <Spinner
+                android:id="@+id/spinner_artistas_activity_discos"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/dropdown_menuPrecio_activity_discos"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="290dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
+            android:orientation="vertical">
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteText_seleccionPrecio_discos_activity"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Seleccione precio maximo"
-                android:inputType="none" />
+                android:layout_gravity="center"
+                android:text="Precios" />
 
+            <Spinner
+                android:id="@+id/spinner_precio_activity_discos"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
 
-        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

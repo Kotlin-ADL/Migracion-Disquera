@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="#1C1C1E"
+    android:background="@drawable/card_background"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
 
@@ -16,19 +16,18 @@
 
         <!--Imagen cover del album-->
         <ImageView
-            android:id="@+id/imageView_album_cover"
+            android:id="@+id/imageView_album_cover_itemDiscoCard"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
              />
         <!--titulo-->
         <TextView
-            android:id="@+id/textView_titulo_disco"
+            android:id="@+id/textView_titulo_itemDiscoCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Comedown Machine"
-            android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -41,11 +40,10 @@
 
             <!--Banda -->
             <TextView
-                android:id="@+id/textView_artista_disco"
+                android:id="@+id/textView_artista_itemDiscoCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="The Strokes"
-                android:textColor="#B0B0B0"
                 android:textSize="14sp" />
 
             <!--Separador-->
@@ -60,11 +58,10 @@
 
             <!--Genero del album-->
             <TextView
-                android:id="@+id/textView_genre"
+                android:id="@+id/textView_genero_itemDiscoCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Indie"
-                android:textColor="#B0B0B0"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -75,7 +72,7 @@
 
             <!--Precio-->
             <TextView
-                android:id="@+id/textView_precio_disco"
+                android:id="@+id/textView_precio_itemDiscoCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -86,7 +83,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_anadir_carrito"
+                android:id="@+id/btn_anadir_carrito_itemDiscoCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
