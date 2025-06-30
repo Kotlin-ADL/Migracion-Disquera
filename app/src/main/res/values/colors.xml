@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+
     <!-- Colores principales del proyecto -->
     <color name="primary_light">#B89E9E</color>      <!-- B89E9E -->
     <color name="white">#FFFFFF</color>              <!-- FFFFFF -->
@@ -21,6 +23,10 @@
     <color name="text_secondary">#261C1C</color>
     <color name="text_hint">#B89E9E</color>
     <color name="text_white">#FFFFFF</color>
+
+    <!-- Colores de estado -->
+    <color name="success">#4CAF50</color> <!-- Verde para éxito -->
+    <color name="error">#F44336</color>   <!-- Rojo para error -->
 
 
 </resources>
