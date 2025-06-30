@@ -1,194 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_discos_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
-<ScrollView
-    android:id="@+id/sVBase"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-<androidx.constraintlayout.widget.ConstraintLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/dark_gray">
-
-
-    <TextView
-        android:id="@+id/tVTitleDiscs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Discos"
-        android:textSize="22sp"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/white"/>
-
-    <LinearLayout
-        android:id="@+id/lLAllButtons"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView_activity_discos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:queryHint="Buscar discos..."
+        app:iconifiedByDefault="false" />
+
+    <Button
+        android:id="@+id/btn_filtros_activity_discos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="Filtros de busqueda" />
+
+
+    <!--Spinners-->
+    <LinearLayout
+        android:id="@+id/layout_filtros_activity_discos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+        android:visibility="visible">
 
-        app:layout_constraintTop_toBottomOf="@id/tVTitleDiscs"
-
-        >
-
-    <Button
-        android:id="@+id/btnFeatured"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#171212"
-        android:text="Presentacion"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp"
-        android:layout_marginStart="3dp"
-        android:layout_weight="2"
-        />
-    <Button
-        android:id="@+id/btnNewArrivals"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#171212"
-        android:text="Recien Llegados"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp"
-        android:layout_marginStart="3dp"
-        android:layout_weight="2"
-        />
-        <Button
-            android:id="@+id/btnOffers"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#171212"
-            android:text="Ofertas"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-        />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnGenres"
-            android:layout_width="0dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Artistas" />
+
+            <Spinner
+                android:id="@+id/spinner_artistas_activity_discos"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#171212"
-            android:text="Generos"
-            android:padding="0dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            />
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Precios" />
 
-
+            <Spinner
+                android:id="@+id/spinner_precio_activity_discos"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
 
 
     </LinearLayout>
-
-    <View
-        android:id="@+id/vSeparator"
-        app:layout_constraintTop_toBottomOf="@+id/lLAllButtons"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#261C1C"
-        />
-
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerDiscos"
-        app:layout_constraintTop_toBottomOf="@id/vSeparator"
-        app:layout_constraintBottom_toTopOf="@id/espacio"
+        android:id="@+id/recyclerView_activity_discos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:clipToPadding="false" />
-
-    <LinearLayout
-        android:id="@+id/espacio"
-        android:layout_width="match_parent"
-
-        android:layout_height="900dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/recyclerDiscos"
-        tools:layout_editor_absoluteX="-38dp" />
+        android:layout_height="match_parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
-
-    <LinearLayout
-        android:id="@+id/lLAllBotButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:paddingBottom="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/medium_gray"
-        >
-
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/medium_gray"
-            android:text="Inicio"
-            android:drawableTop="@drawable/ic_home"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            />
-
-        <Button
-            android:id="@+id/btnSearch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/medium_gray"
-            android:text="buscar"
-            android:drawableTop="@drawable/ic_search_24"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            />
-
-        <Button
-            android:id="@+id/btnCart"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/medium_gray"
-            android:text="Carrito"
-            android:drawableTop="@drawable/baseline_shopping_cart_24"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            />
-
-        <Button
-            android:id="@+id/btnProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/medium_gray"
-            android:text="Perfil"
-            android:drawableTop="@drawable/ic_person"
-            android:padding="0dp"
-            android:layout_marginStart="3dp"
-            android:layout_weight="1"
-            />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
