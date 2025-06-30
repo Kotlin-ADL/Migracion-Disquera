@@ -18,3 +18,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+fun main() {
+    println("Prueba de jdk y gradle")
+    println("Prueba de jdk y gradle 2")
+}

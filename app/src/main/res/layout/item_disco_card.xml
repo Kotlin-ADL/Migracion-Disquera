@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/card_background"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--Imagen cover del album-->
+        <ImageView
+            android:id="@+id/imageView_album_cover_itemDiscoCard"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="imagen del album"
+            android:scaleType="centerCrop"
+             />
+        <!--titulo-->
+        <TextView
+            android:id="@+id/textView_titulo_itemDiscoCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Titulo"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!--Bandera y genero-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <!--Banda -->
+            <TextView
+                android:id="@+id/textView_artista_itemDiscoCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Strokes"
+                android:textSize="14sp" />
+
+            <!--Separador-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text=" • "
+                android:textColor="#B0B0B0"
+                android:textSize="14sp" />
+
+            <!--Genero del album-->
+            <TextView
+                android:id="@+id/textView_genero_itemDiscoCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indie"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <!--Precio-->
+            <TextView
+                android:id="@+id/textView_precio_itemDiscoCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="27,99 €"
+                android:textColor="#34C759"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_anadir_carrito_itemDiscoCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#FFCC00"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Añadir al carrito"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
