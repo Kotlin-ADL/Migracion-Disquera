@@ -9,12 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fcterryamigos.disquera.R
 import com.fcterryamigos.disquera.model.Disco
 
-class DiscoAdapter(private val discos: List<Disco>) :
+class DiscoAdapter(private var discos: List<Disco>) :
     RecyclerView.Adapter<DiscoAdapter.DiscoViewHolder>() {
 
     class DiscoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imagen: ImageView = itemView.findViewById(R.id.ivAlbumCover)
         val titulo: TextView = itemView.findViewById(R.id.tvAlbumTitle)
+    }
+
+    fun actualizarLista(nuevaLista: List<Disco>) {
+        discos = nuevaLista
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiscoViewHolder {

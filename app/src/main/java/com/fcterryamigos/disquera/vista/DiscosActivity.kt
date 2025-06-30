@@ -19,6 +19,8 @@ class DiscosActivity : AppCompatActivity() {
 
         val recycler = findViewById<RecyclerView>(R.id.recyclerDiscos)
         val btnHome = findViewById<Button>(R.id.btnHome)
+        val btnOfers = findViewById<Button>(R.id.btnOffers)
+        val btnFeatured = findViewById<Button>(R.id.btnFeatured)
 
         btnHome.setOnClickListener {
             val intent = Intent(this, InicioActivity::class.java)
@@ -34,6 +36,31 @@ class DiscosActivity : AppCompatActivity() {
             Disco("Eminem", R.drawable.album_placeholder)
         )
 
-        recycler.adapter = DiscoAdapter(discos)
+        val discsOffers = listOf(
+            Disco("System of a Down", R.drawable.album_placeholder),
+            Disco("Blink-182", R.drawable.album_placeholder),
+            Disco("Green Day", R.drawable.album_placeholder)
+        )
+
+        val featuredDiscs = listOf(
+            Disco("Peso Pluma", R.drawable.album_placeholder),
+            Disco("Natanael Cano", R.drawable.album_placeholder),
+            Disco("Junior H", R.drawable.album_placeholder),
+            Disco("Kidd Voodoo", R.drawable.album_placeholder),
+            Disco("Drake", R.drawable.album_placeholder),
+            Disco("Christian Nodal", R.drawable.album_placeholder)
+        )
+
+        val adapter = DiscoAdapter(discos)
+        recycler.adapter = adapter
+
+        btnOfers.setOnClickListener {
+            adapter.actualizarLista(discsOffers)
+        }
+
+        btnFeatured.setOnClickListener {
+            adapter.actualizarLista(featuredDiscs)
+        }
+
     }
 }
