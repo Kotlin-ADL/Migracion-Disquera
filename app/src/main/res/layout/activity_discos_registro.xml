@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registrar un nuevo disco"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ingrese los datos del nuevo disco"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:textAlignment="center"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nombre del disco -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del disco"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Artista -->
+    <EditText
+        android:id="@+id/etArtista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Artista"
+        android:inputType="text"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Discográfica -->
+    <EditText
+        android:id="@+id/etDiscografica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Discográfica"
+        android:inputType="text"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etArtista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Año -->
+    <EditText
+        android:id="@+id/etAnio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Año"
+        android:inputType="number"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etDiscografica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Género musical -->
+    <EditText
+        android:id="@+id/etGenero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Género musical"
+        android:inputType="text"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etAnio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Precio -->
+    <EditText
+        android:id="@+id/etPrecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/etGenero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Portada: Imagen seleccionada -->
+    <ImageView
+        android:id="@+id/ivPortada"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="Portada del disco"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/etPrecio"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botón para subir imagen -->
+    <Button
+        android:id="@+id/btnSeleccionarImagen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar portada"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/ivPortada"
+        app:layout_constraintTop_toTopOf="@id/ivPortada"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar disco"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/ivPortada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
