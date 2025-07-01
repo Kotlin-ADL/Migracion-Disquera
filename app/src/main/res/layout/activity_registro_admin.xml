@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -24,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Disquera "
+            android:text="Disquera"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
@@ -33,12 +32,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inicio sesión Administrador"
+            android:text="Crear nueva cuenta"
             android:textSize="16sp"
             android:textColor="@color/white"
             android:layout_marginBottom="32dp" />
 
-        <!-- Campos de entrada -->
+        <!-- Campo nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/black"
+            android:textColorHint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:textColor="@color/white"
+                android:inputType="textPersonName"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo email -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,13 +73,13 @@
                 android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="12dp" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Campo contraseña -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             app:boxStrokeColor="@color/black"
             android:textColorHint="@color/white"
             app:passwordToggleEnabled="true">
@@ -75,47 +93,55 @@
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/ic_lock"
                 android:drawablePadding="12dp" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Botón de login -->
+        <!-- Confirmar contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:boxStrokeColor="@color/black"
+            android:textColorHint="@color/white"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirmar_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirmar Contraseña"
+                android:textColor="@color/white"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón de registro -->
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_registrar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Iniciar Sesión"
+            android:text="Registrar"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/accent_brown"
             android:layout_marginBottom="16dp" />
 
-        <!-- Divisor -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginVertical="16dp" />
-
-        <!-- Link para registro -->
+        <!-- Volver a login -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿No tienes cuenta?"
+            android:text="¿Ya tienes cuenta?"
             android:textSize="14sp"
             android:textColor="@color/white"
             android:layout_marginBottom="8dp" />
 
         <Button
-            android:id="@+id/btn_ir_registro"
+            android:id="@+id/btn_ir_login"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Crear Cuenta Nueva"
+            android:text="Volver a Iniciar Sesión"
             android:textSize="16sp"
-            android:backgroundTint="@color/accent_brown"
-            android:layout_marginBottom="16dp" />
-
-
+            android:backgroundTint="@color/black" />
 
     </LinearLayout>
-
 </ScrollView>
