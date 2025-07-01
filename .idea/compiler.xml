@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="21">
-      <module name="migracion.Disquera_Vinilos.app" target="21" />
+      <module name="Disquera_Vinilos.app" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
