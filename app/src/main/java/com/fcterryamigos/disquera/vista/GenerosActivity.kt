@@ -3,30 +3,58 @@ package com.fcterryamigos.disquera.vista
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fcterryamigos.disquera.R
+import com.fcterryamigos.disquera.data.GeneroDao
+import com.fcterryamigos.disquera.modelo.Genero
 
 class GenerosActivity : AppCompatActivity() {
 
-    // Ejecuta y carga
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Carga el diseño de la pantalla desde el archivo activity_generos.xml
         setContentView(R.layout.activity_generos)
 
-        // Buscamos el TextView por su ID definido en el XML
-        val titulo = findViewById<TextView>(R.id.tituloGeneros)
+        val tvGenero = findViewById<TextView>(R.id.tvGenero)
+        val btnEditar = findViewById<Button>(R.id.btnEditar)
+        val btnEliminar = findViewById<Button>(R.id.btnEliminar)
+        val etNuevoGenero = findViewById<EditText>(R.id.etNuevoGenero)
+        val btnAgregar = findViewById<Button>(R.id.btnAgregar)
 
-        // Cambiamos el texto del título (opcional)
-        titulo.text = "Géneros musicales disponibles"
+        val dao = GeneroDao(this)
+        var generos = dao.obtenerTodos()
 
-        // Busca el botón por su ID definido en el XML
-        val btnVolver = findViewById<Button>(R.id.btnVolver)
+        // Mostrar primer género
+        if (generos.isNotEmpty()) {
+            tvGenero.text = generos[0].nombre
+        } else {
+            tvGenero.text = "Sin géneros aún"
+        }
 
-        // Cuando se hace clic en el botón, cerramos esta pantalla y volvemos atrás
-        btnVolver.setOnClickListener {
-            finish()
+        // Agregar un nuevo género
+        btnAgregar.setOnClickListener {
+            val nombre = etNuevoGenero.text.toString().trim()
+
+            if (nombre.isNotEmpty()) {
+                val nuevoGenero = Genero(nombre = nombre)
+                dao.insertar(nuevoGenero)
+                Toast.makeText(this, "Género agregado", Toast.LENGTH_SHORT).show()
+
+                etNuevoGenero.text.clear()
+                generos = dao.obtenerTodos() // Refrescar lista
+                tvGenero.text = generos.last().nombre
+            } else {
+                Toast.makeText(this, "Debes ingresar un nombre", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Botones editar y eliminar aún no implementados esto deberia hacerlo solo el admini??
+        btnEditar.setOnClickListener {
+            Toast.makeText(this, "Función editar aún no implementada", Toast.LENGTH_SHORT).show()
+        }
+
+        btnEliminar.setOnClickListener {
+            Toast.makeText(this, "Función eliminar aún no implementada", Toast.LENGTH_SHORT).show()
         }
     }
 }
