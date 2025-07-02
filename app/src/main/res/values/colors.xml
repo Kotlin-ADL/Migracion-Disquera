@@ -15,6 +15,8 @@
     <color name="transparent">#00000000</color>
     <color name="semi_transparent_dark">#80000000</color>
     <color name="semi_transparent_light">#80FFFFFF</color>
+    <color name="success">#FF4CAF50</color>
+    <color name="error">#FFF44336</color>
 
     <!-- Colores de texto -->
     <color name="text_primary">#171212</color>
@@ -22,6 +24,16 @@
     <color name="text_hint">#B89E9E</color>
     <color name="text_white">#FFFFFF</color>
 
+    <!-- Colores Material Design estándar (requeridos por Android) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Aliases para mantener compatibilidad -->
+    <color name="primary">#543D3D</color>            <!-- Usa accent_brown como primary -->
+    <color name="primary_dark">#382929</color>       <!-- Usa dark_brown como primary_dark -->
+    <color name="accent">#B89E9E</color>             <!-- Usa primary_light como accent -->
 
 </resources>
-

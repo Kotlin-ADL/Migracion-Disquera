@@ -1,12 +1,56 @@
-package com.fcterryamigos.disquera.conexionbdsqllite
+package com.fcterryamigos.disquera.data
 
-import android.app.Application
-import com.fcterryamigos.disquera.data.DBManager
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.fcterryamigos.disquera.data.dao.CarritoDao
 
-class App : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        // Inicializa la base de datos centralizada
-        DBManager.init(this)
+@Database(
+    entities = [
+        Usuario::class,
+        Carrito::class,
+        ProductoCarrito::class,
+        Disco::class,
+        Genero::class,
+        Pedido::class,
+        ProductoPedido::class
+    ],
+    version = 1,
+    exportSchema = false
+)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun carritoDao(): CarritoDao
+    // Agrega otros DAOs aquí cuando los crees
+    // abstract fun usuarioDao(): UsuarioDao
+    // abstract fun discoDao(): DiscoDao
+}
+
+object DBManager {
+    @Volatile
+    private var INSTANCE: AppDatabase? = null
+
+    fun getDatabase(context: Context): AppDatabase {
+        return INSTANCE ?: synchronized(this) {
+            val instance = Room.databaseBuilder(
+                context.applicationContext,
+                AppDatabase::class.java,
+                "disquera_database"
+            )
+                .fallbackToDestructiveMigration() // Para desarrollo
+                .build()
+            INSTANCE = instance
+            instance
+        }
+    }
+
+    // Métodos de conveniencia para acceder a los DAOs
+    fun getCarritoDao(context: Context): CarritoDao {
+        return getDatabase(context).carritoDao()
+    }
+
+    // Método para inicializar (llamado desde App.kt)
+    fun initialize(context: Context) {
+        getDatabase(context)
     }
 }
