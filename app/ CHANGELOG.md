@@ -43,3 +43,14 @@ Se eliminó el campo avatar (tipo LONGBLOB) de usuario por simplicidad en la app
 Relaciones foráneas están declaradas, pero recuerda activar PRAGMA foreign_keys = ON si deseas validación en SQLite.
 Se usaron tipos compatibles con SQLite (INTEGER, TEXT, REAL, BLOB).
 
+02-07-2025 
+Actualizar proyecto con Room y clases de datos
+
+- Agregar dependencias de Room en build.gradle
+- Crear clase Carrito completa con anotaciones Room
+- Crear CarritoDao con operaciones CRUD
+- Crear CarritoConProductos para relaciones
+- Actualizar Usuario con anotaciones @Entity
+- Crear DBManager para gestión de base de datos
+- Agregar colores faltantes en colors.xml
+- Corregir AndroidManifest.xml"
