@@ -1,4 +1,7 @@
 package com.fcterryamigos.disquera.data
 
-class Carrito {
-}
+data class Carrito(
+    val id: Int,
+    val usuario_id: Int?
+
+)

@@ -1,4 +1,7 @@
 package com.fcterryamigos.disquera.data
 
-class GeneroDisco {
-}
+data class GeneroDisco (
+    val generoId: Int,
+    val discoId: Int
+
+)
