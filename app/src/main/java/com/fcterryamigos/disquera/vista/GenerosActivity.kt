@@ -1,10 +1,7 @@
 package com.fcterryamigos.disquera.vista
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.fcterryamigos.disquera.R
 import com.fcterryamigos.disquera.data.GeneroDao
@@ -21,18 +18,22 @@ class GenerosActivity : AppCompatActivity() {
         val btnEliminar = findViewById<Button>(R.id.btnEliminar)
         val etNuevoGenero = findViewById<EditText>(R.id.etNuevoGenero)
         val btnAgregar = findViewById<Button>(R.id.btnAgregar)
+        val listaView = findViewById<ListView>(R.id.listaGeneros) 
 
         val dao = GeneroDao(this)
         var generos = dao.obtenerTodos()
 
-        // Mostrar primer género
+
+        val adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, generos.map { it.nombre })
+        listaView.adapter = adaptador
+
+
         if (generos.isNotEmpty()) {
             tvGenero.text = generos[0].nombre
         } else {
             tvGenero.text = "Sin géneros aún"
         }
 
-        // Agregar un nuevo género
         btnAgregar.setOnClickListener {
             val nombre = etNuevoGenero.text.toString().trim()
 
@@ -42,14 +43,17 @@ class GenerosActivity : AppCompatActivity() {
                 Toast.makeText(this, "Género agregado", Toast.LENGTH_SHORT).show()
 
                 etNuevoGenero.text.clear()
-                generos = dao.obtenerTodos() // Refrescar lista
+                generos = dao.obtenerTodos() // Refrescar
                 tvGenero.text = generos.last().nombre
+
+
+                val nuevoAdaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, generos.map { it.nombre })
+                listaView.adapter = nuevoAdaptador
             } else {
                 Toast.makeText(this, "Debes ingresar un nombre", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Botones editar y eliminar aún no implementados esto deberia hacerlo solo el admini??
         btnEditar.setOnClickListener {
             Toast.makeText(this, "Función editar aún no implementada", Toast.LENGTH_SHORT).show()
         }
