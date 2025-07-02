@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,83 +10,107 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nombre"
-        app:layout_constraintTop_toTopOf="parent"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etArtista"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:hint="Artista"
-        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/etNombre" />
 
     <EditText
         android:id="@+id/etDiscografica"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:hint="Discográfica"
-        app:layout_constraintTop_toBottomOf="@id/etArtista"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/etArtista" />
 
     <EditText
         android:id="@+id/etAno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:hint="Año"
         android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@id/etDiscografica"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/etDiscografica" />
 
     <EditText
         android:id="@+id/etPrecio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:hint="Precio"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/etAno"
+        android:minHeight="48dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/etAno" />
 
     <Spinner
         android:id="@+id/spGenero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etPrecio"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/etPrecio" />
 
     <ImageView
         android:id="@+id/imgPortada"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Portada del disco"
         android:src="@drawable/ic_launcher_foreground"
-        app:layout_constraintTop_toBottomOf="@id/spGenero"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintTop_toBottomOf="@id/spGenero" />
 
     <Button
         android:id="@+id/btnSeleccionarImagen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
         android:text="Seleccionar imagen"
-        app:layout_constraintTop_toBottomOf="@id/imgPortada"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPortada" />
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:minHeight="48dp"
         android:text="Guardar datos disco"
-        app:layout_constraintTop_toBottomOf="@id/btnSeleccionarImagen"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSeleccionarImagen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
