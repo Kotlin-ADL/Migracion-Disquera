@@ -8,7 +8,7 @@ class DiscoDao(context: Context) {
     private val dbHelper = DiscosDBHelper(context)
 
     fun insertar(disco: Disco): Long {
-        val db = dbHelper.writableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val values = ContentValues().apply {
             put("alta", disco.alta)
             put("ano", disco.ano)

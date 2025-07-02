@@ -127,4 +127,11 @@ class DiscosDBHelper(context: Context) :
         db.execSQL("DROP TABLE IF EXISTS genero")
         onCreate(db)
     }
+
+    // Activar validación de claves foráneas
+        override fun onOpen(db: SQLiteDatabase) {
+        super.onOpen(db)
+        db.execSQL("PRAGMA foreign_keys = ON")
+    }
+
 }

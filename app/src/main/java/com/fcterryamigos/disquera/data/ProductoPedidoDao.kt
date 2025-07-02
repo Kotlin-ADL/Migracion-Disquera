@@ -2,13 +2,14 @@ package com.fcterryamigos.disquera.data
 
 import android.content.ContentValues
 import android.content.Context
+import com.sakhura.conexionbdsqllite.data.DBManager
 import com.sakhura.conexionbdsqllite.data.DiscosDBHelper
 
 class ProductoPedidoDao(context: Context) {
     private val dbHelper = DiscosDBHelper(context)
 
     fun insertar(pp: ProductoPedido): Long {
-        val db = dbHelper.writableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val values = ContentValues().apply {
             put("id", pp.id)
             put("cantidad", pp.cantidad)
@@ -20,7 +21,7 @@ class ProductoPedidoDao(context: Context) {
 
     fun obtenerTodos(): List<ProductoPedido> {
         val pps = mutableListOf<ProductoPedido>()
-        val db = dbHelper.readableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val cursor = db.rawQuery("SELECT * FROM producto_pedido", null)
 
         with(cursor) {

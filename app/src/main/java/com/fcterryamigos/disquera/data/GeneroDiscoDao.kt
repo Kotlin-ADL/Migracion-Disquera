@@ -2,13 +2,14 @@ package com.fcterryamigos.disquera.data
 
 import android.content.ContentValues
 import android.content.Context
+import com.sakhura.conexionbdsqllite.data.DBManager
 import com.sakhura.conexionbdsqllite.data.DiscosDBHelper
 
 class GeneroDiscoDao(context: Context) {
     private val dbHelper = DiscosDBHelper(context)
 
     fun insertar(generoDisco: GeneroDisco): Long {
-        val db = dbHelper.writableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val values = ContentValues().apply {
             put("genero_id", generoDisco.generoId)
             put("disco_id", generoDisco.discoId)
@@ -18,7 +19,7 @@ class GeneroDiscoDao(context: Context) {
 
     fun obtenerTodos(): List<GeneroDisco> {
         val generoDiscos = mutableListOf<GeneroDisco>()
-        val db = dbHelper.readableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val cursor = db.rawQuery("SELECT * FROM genero_disco", null)
 
         with(cursor) {
@@ -36,7 +37,7 @@ class GeneroDiscoDao(context: Context) {
 
     fun obtenerPorGeneroId(generoId: Int): List<GeneroDisco> {
         val generoDiscos = mutableListOf<GeneroDisco>()
-        val db = dbHelper.readableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val cursor = db.rawQuery("SELECT * FROM genero_disco WHERE genero_id = ?", arrayOf(generoId.toString()))
 
         with(cursor) {
@@ -54,7 +55,7 @@ class GeneroDiscoDao(context: Context) {
 
     fun obtenerPorDiscoId(discoId: Int): List<GeneroDisco> {
         val generoDiscos = mutableListOf<GeneroDisco>()
-        val db = dbHelper.readableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         val cursor = db.rawQuery("SELECT * FROM genero_disco WHERE disco_id = ?", arrayOf(discoId.toString()))
 
         with(cursor) {
@@ -71,17 +72,17 @@ class GeneroDiscoDao(context: Context) {
     }
 
     fun eliminar(generoId: Int, discoId: Int): Int {
-        val db = dbHelper.writableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         return db.delete("genero_disco", "genero_id = ? AND disco_id = ?", arrayOf(generoId.toString(), discoId.toString()))
     }
 
     fun eliminarPorGeneroId(generoId: Int): Int {
-        val db = dbHelper.writableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         return db.delete("genero_disco", "genero_id = ?", arrayOf(generoId.toString()))
     }
 
     fun eliminarPorDiscoId(discoId: Int): Int {
-        val db = dbHelper.writableDatabase
+        val db = DBManager.dbHelper.writableDatabase
         return db.delete("genero_disco", "disco_id = ?", arrayOf(discoId.toString()))
     }
 }
