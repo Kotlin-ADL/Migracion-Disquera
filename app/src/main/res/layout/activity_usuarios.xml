@@ -19,10 +19,11 @@
             >
 
             <ImageButton
+                android:id="@+id/back_btn"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/ic_back"
-                android:background="transparent"
+                android:background="#171212"
                 />
 
             <TextView
@@ -68,15 +69,16 @@
                     android:layout_height="48dp"
                     android:src="@drawable/plus"
                     android:contentDescription="agregar producto"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:scaleType="centerInside"
                     />
 
                 <Button
+                    android:id="@+id/new_product_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Add New Product"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:textSize="16sp"
                     />
             </LinearLayout>
@@ -93,15 +95,16 @@
                     android:layout_height="48dp"
                     android:src="@drawable/manage"
                     android:contentDescription="gestionar producto"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:scaleType="centerInside"
                     />
 
                 <Button
+                    android:id="@+id/manage_product_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Manage Products"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:textSize="16sp"
                     />
             </LinearLayout>
@@ -119,61 +122,57 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingBottom="8dp"
                 android:text="Orders"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
                 android:textSize="22sp"
-                android:paddingTop="24dp"
-                android:paddingBottom="8dp"/>
+                android:textStyle="bold" />
 
             <!-- Sección: view orders -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/view_orders"
+                    android:background="#171212"
                     android:contentDescription="ver las órdenes"
-                    android:background="transparent"
                     android:scaleType="centerInside"
-                    />
+                    android:src="@drawable/view_orders" />
 
                 <Button
+                    android:id="@+id/view_products_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:background="#171212"
                     android:text="View All Orders"
-                    android:background="transparent"
-                    android:textSize="16sp"
-                    />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!-- Sección: pending orders -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/pending_orders"
+                    android:background="#171212"
                     android:contentDescription="pendientes"
-                    android:background="transparent"
                     android:scaleType="centerInside"
-                    />
+                    android:src="@drawable/pending_orders" />
 
                 <Button
+                    android:id="@+id/pending_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:background="#171212"
                     android:text="Pending Orders"
-                    android:background="transparent"
-                    android:textSize="16sp"
-                    />
+                    android:textSize="16sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -206,15 +205,16 @@
                     android:layout_height="48dp"
                     android:src="@drawable/settings"
                     android:contentDescription="settings"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:scaleType="centerInside"
                     />
 
                 <Button
+                    android:id="@+id/settings_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="App Settings"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:textSize="16sp"
                     />
             </LinearLayout>
@@ -231,15 +231,16 @@
                     android:layout_height="48dp"
                     android:src="@drawable/change_pass"
                     android:contentDescription="change password"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:scaleType="centerInside"
                     />
 
                 <Button
+                    android:id="@+id/change_pass_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Change Password"
-                    android:background="transparent"
+                    android:background="#171212"
                     android:textSize="16sp"
                     />
             </LinearLayout>
