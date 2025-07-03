@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#171212"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success!"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/text_exito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="El género ha sido creado con exito!"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_volver_administracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a la administración"
+            android:background="#E82933"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

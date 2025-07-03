@@ -37,6 +37,9 @@ class GeneroRegistroActivity : AppCompatActivity() {
                 println("Registrar género: $textoGenero")
                 println("URI de la imagen: $uriImagenSeleccionada")
                 // Aquí puedes luego guardar en base de datos o enviar al backend
+
+                // Mostrar el layout que el registro del género es exitoso.
+                setContentView(R.layout.activity_genero_registro_ok)
             } else {
                 println("Por favor ingresa un nombre y selecciona una imagen.")
             }
