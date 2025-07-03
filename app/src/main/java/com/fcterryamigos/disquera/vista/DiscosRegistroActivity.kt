@@ -1,3 +1,4 @@
+
 package com.fcterryamigos.disquera.vista
 
 import android.app.Activity
@@ -66,7 +67,7 @@ class DiscosRegistroActivity : AppCompatActivity() {
 
     private fun guardarDisco() {
         val nombre = etNombre.text.toString().trim()
-        val artista = etArtista.text.toString().trim()
+     val artista = etArtista.text.toString().trim()
         val discografica = etDiscografica.text.toString().trim()
         val anio = etAnio.text.toString().trim()
         val genero = etGenero.text.toString().trim()

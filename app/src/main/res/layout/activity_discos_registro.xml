@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -141,3 +142,81 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/cardview_dark_background">
+
+    <EditText
+        android:id="@+id/discName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Nombre del disco"
+        android:inputType="text"
+        android:autofillHints="discName" />
+
+    <EditText
+        android:id="@+id/artistName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Nombre Artista" />
+
+    <EditText
+        android:id="@+id/discoName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Nombre Discografica " />
+
+    <EditText
+        android:id="@+id/year"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Año del Disco" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Valor" />
+
+    <EditText
+        android:id="@+id/genre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Genero" />
+
+    <!-- Upload frontPage Image -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSeleccionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar Imagen" />
+
+            <ImageView
+                android:id="@+id/imagenSeleccionada"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar nuevo Disco"
+    />
+>>>>>>> cvargas-v
