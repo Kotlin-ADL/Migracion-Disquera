@@ -1,5 +1,5 @@
 package com.fcterryamigos.disquera.vista
-//falta aún la lógica para subir la imagen.
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
