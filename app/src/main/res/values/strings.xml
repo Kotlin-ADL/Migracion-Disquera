@@ -43,4 +43,10 @@
     <string name="cancel">Cancelar</string>
     <string name="retry">Reintentar</string>
 
+    <!-- activity_inicio.xml strings -->
+    <string name="vinilo_o_s">Vinilo O´s</string>
+    <string name="tu_tienda_de_discos_de_vinilo">Tu tienda de discos de vinilo</string>
+    <string name="ver_discos">Ver discos</string>
+    <string name="registrarse">Registrarse</string>
+
 </resources>
