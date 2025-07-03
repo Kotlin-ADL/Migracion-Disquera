@@ -2,9 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bytecodeTargetLevel target="21" />
 =======
     <bytecodeTargetLevel target="22" />
 >>>>>>> felipeazs
+=======
+
+>>>>>>> 534e98812246f37772fdfd1c9d6030bfe78a0d09
   </component>
 </project>
