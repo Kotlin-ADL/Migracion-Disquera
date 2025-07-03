@@ -1,5 +1,6 @@
 package com.fcterryamigos.disquera.vista
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -45,3 +46,8 @@ class UsuariosActivity: AppCompatActivity() {
 
     }
 }
+=======
+class UsuariosActivity {
+    /*Testing creación de rama felipeazs*/
+}
+>>>>>>> felipeazs
