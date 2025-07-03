@@ -17,23 +17,28 @@
             android:id="@+id/text_success"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Success!"
-            android:textColor="#FFFFFF"/>
+            android:text="Success !"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_margin ="8dp" />
 
         <TextView
             android:id="@+id/text_exito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="El género ha sido creado con exito!"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_margin ="8dp" />
 
         <Button
             android:id="@+id/btn_volver_administracion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver a la administración"
-            android:background="#E82933"
-            android:textColor="#FFFFFF" />
+            android:color="#E82933"
+            android:textColor="#FFFFFF"
+            android:layout_margin ="8dp"/>
 
     </LinearLayout>
 
