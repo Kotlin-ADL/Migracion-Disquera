@@ -3,4 +3,144 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_gray" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detalles del pedido"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/text_white"
+                android:paddingBottom="16dp"/>
+
+            <!-- Datos de envío -->
+            <TextView
+                android:text="Datos de envío"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextSecondaryStyle" />
+            <TextView
+                android:id="@+id/tvNombre"
+                android:textColor="@color/text_white"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:textColor="@color/text_white"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/tvProvincia"
+                android:textColor="@color/text_white"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_height="16dp"
+                android:layout_width="match_parent"/>
+
+            <!-- Datos de pago -->
+            <TextView
+                android:text="Datos de pago"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white"
+                style="@style/TextSecondaryStyle"/>
+            <TextView
+                android:id="@+id/tvTipoTarjeta"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white" />
+            <TextView
+                android:id="@+id/tvTitular"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white" />
+            <TextView
+                android:id="@+id/tvNumeroTarjeta"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white" />
+
+            <View
+                android:layout_height="16dp"
+                android:layout_width="match_parent"/>
+
+            <!-- Productos del pedido -->
+            <TextView
+                android:text="Productos del pedido"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white"
+                style="@style/TextSecondaryStyle"/>
+            <LinearLayout
+                android:id="@+id/layoutProductos"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <!-- Estado del pedido -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+
+                    android:text="Estado del pedido:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextSecondaryStyle"/>
+
+                <TextView
+                    android:id="@+id/tvEstadoPedido"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/text_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
