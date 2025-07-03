@@ -11,6 +11,7 @@ class DiscoVista : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_disco_vista)
 
         val ivAlbumCover = findViewById<ImageView>(R.id.ivAlbumCover)
         val tvAlbumTitle = findViewById<TextView>(R.id.tvAlbumTitle)
