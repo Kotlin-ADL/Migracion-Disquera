@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Disquera_Vinilos"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".vista.LoginAdminActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".vista.DiscoVista" />
+        <activity android:name=".vista.RegistroActivity" />
     </application>
+
 
 </manifest>
